@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="shoppingCart">
+
+
+    <div class="info">Koszyk</div>
+
+    <ng-container *ngIf="cart$ | async as cart">
+      <div class="row ">
+        <div class="col-lg cart">
+          Masz {{ cart.totalItemsCount }} produktów w swoim koszyku. Sfinalizuj zamówienie!
+        </div>
+      </div>
+
+      <div class="headers">
+        <div class="row">
+          <div class="col-lg-6 col-md-4 col-sm-5">Produkt</div>
+          <div class="col-2 d-none d-md-flex justify-content-start">Cena</div>
+          <div class="col-lg-2 col-md-3 col-sm-4 d-flex justify-content-center">Ilość</div>
+          <div class="col-lg-2 col-sm-3 d-flex justify-content-end">Wartość</div>
+        </div>
+      </div>
+
+
+      <div class="items" *ngFor="let item of cart.items">
+        <div class="row">
+          <div class="col-lg-6 col-md-4 col-sm-5 align-self-center mb-2">{{ item.name }}</div>
+          <div class="col-lg-2 col-md-2 d-none d-md-flex justify-content-start align-self-center">{{ item.price | number: '1.2'}} zł</div>
+          <div class="col-lg-2 col-md-3 col-sm-4 d-flex justify-content-center align-self-center mb-2">
+            <product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 d-flex justify-content-end align-self-center">{{ item.totalPrice | number: '1.2'}} zł</div>
+
+        </div>
+      </div>
+
+      <div class="row buttons">
+        <div class="col-lg-8 col-md-7 col-sm-9 col-12 order-sm-1 order-2">
+          <a mat-raised-button color="primary" *ngIf="cart.items.length" routerLink="/check-out" class="checkOut">Zamów z dostawą</a>
+          <button mat-raised-button color="accent" (click)="clearCart()">
+            Wyczyść koszyk
+          </button>
+        </div>
+        <div class="col-lg-2 col-md-1 d-sm-none d-md-block order-sm-2"></div>
+        <div class="col-lg-2 col-md-4 col-sm-3 col-12 d-flex justify-content-sm-end justify-content-center align-self-center totalPrice order-sm-3 order-1">{{cart.totalPrice | number: '1.2'}} zł</div>
+      </div>
+
+
+
+    </ng-container>
+
+  </div>
+
+</div>

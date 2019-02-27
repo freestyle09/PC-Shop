@@ -1,0 +1,811 @@
+<div class="product-description">
+  <!-- Product little description -->
+  <div class="productTitle row d-flex justify-content-sm-start justify-content-center">
+    {{product.name}}
+    <ng-container *ngIf="product.model">- {{product.model}}</ng-container>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-12 order-lg-1 order-1">
+      <div class="productParam">
+        <p>
+          Najważniejsze cechy produktu:
+        </p>
+        <ng-container *ngIf="product.screenDiagonal">
+          <div>
+            <i class="material-icons arrow-my ">keyboard_arrow_right</i>
+            <p>Wielkość matrycy:
+              <span class="color">{{product.screenDiagonal}}</span>
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="product.matrixType">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Rodzaj matrycy:
+              <span class="color">{{product.matrixType}}</span>
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="product.screenResolution">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Rozdzielczość natywna ekranu:
+              <br />
+              <span class="color">{{product.screenResolution}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.screenType">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Typ matrycy:
+
+              <span class="color">{{product.screenType}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.discType">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Rodzaj dysku:
+
+              <span class="color">{{product.discType}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.typeConnection">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Typ złącza:
+
+              <span class="color">{{product.typeConnection}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.tripod">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Statyw:
+
+              <span class="color">{{product.tripod}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.producerChipset">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Producent chipsetu:
+
+              <span class="color">{{product.producerChipset}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.modelChipset">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Model chipsetu:
+
+              <span class="color">{{product.modelChipset}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.sizeMemory">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Wielkość pamięci:
+
+              <span class="color">{{product.sizeMemory}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.typeMemory">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Typ zastosowanej pamięci:
+
+              <span class="color">{{product.typeMemory}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.destinyAntena">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Przeznaczenie anteny:
+
+              <span class="color">{{product.destinyAntena}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.widthFormat">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Format szerokości:
+
+              <span class="color">{{product.widthFormat}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.discCapacity">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Pojemność dysku:
+
+              <span class="color">{{product.discCapacity}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <!-- Motherboards -->
+        <ng-container *ngIf="product.standardMb">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Standard płyty:
+              <span class="color">{{product.standardMb}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.socketMb">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Gniazdo procesora:
+              <span class="color">{{product.socketMb}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.chipset">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Chipset płyty głównej:
+              <span class="color">{{product.chipset}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.crossfire">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Obsługa technologii CrossFire:
+              <span class="color">{{product.crossfire}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.sli">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Obsługa technologii SLI:
+              <span class="color">{{product.sli}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <!--  -->
+        <!-- Games -->
+        <ng-container *ngIf="product.platform">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Platforma:
+              <span class="color">{{product.platform}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.drive">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Nośnik:
+              <span class="color">{{product.drive}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.age">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Kategoria wiekowa:
+              <span class="color">{{product.age}}</span>
+            </p>
+          </div>
+
+        </ng-container>
+        <!-- end games -->
+        <!-- PS4 -->
+        <ng-container *ngIf="product.psDisc">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Pojemność dysku twardego:
+              <br />
+              <span class="color">{{product.psDisc}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.type">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Typ:
+
+              <span class="color">{{product.type}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.language">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Wersja językowa:
+
+              <span class="color">{{product.language}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.timeLicense">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Okres licencji:
+
+              <span class="color">{{product.timeLicense}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.version">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Wersja produktu:
+
+              <span class="color">{{product.version}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.typeCommunication">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Rodzaj komunikacji:
+
+              <span class="color">{{product.typeCommunication}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.amountSpeaker">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Ilość głośników:
+
+              <span class="color">{{product.amountSpeaker}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.amountSatellite">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Ilość głośników satelitarnych:
+              <br />
+              <span class="color">{{product.amountSatellite}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.hasSubwoofer">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Głośnik niskotonowy [subwoofer]:
+              <br />
+              <span class="color">{{product.hasSubwoofer}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.band">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Pasmo przenoszenia:
+              <br />
+              <span class="color">{{product.band}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.interface">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Interfejs:
+
+              <span class="color">{{product.interface}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.dpi">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Rozdzielczość pracy:
+
+              <span class="color">{{product.dpi}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.manufacturer">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Producent układu:
+
+              <span class="color">{{product.manufacturer}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.sampling">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Próbkowanie:
+
+              <span class="color">{{product.sampling}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.samplingFrequency">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Częstotliwość próbkowania:
+              <br />
+              <span class="color">{{product.samplingFrequency}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.functions">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Funkcje urządzenia:
+              <br />
+              <span class="color">{{product.functions | slice: 1}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.operationMode">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Funkcje urządzenia:
+              <br />
+              <span class="color">{{product.operationMode | slice: 1}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.standards">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Standard:
+              <br />
+              <span class="color">{{product.standards | slice: 1}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.strength">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Moc:
+
+              <span class="color">{{product.strength}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.ramMemory">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Rodzaj pamięci:
+              <span class="color">{{product.ramMemory}}</span>
+            </p>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="product.standard">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Standard:
+
+              <span class="color">{{product.standard}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.standardVersion">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Wersja standardu:
+
+              <span class="color">{{product.standardVersion}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.singleModule">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Pojemność pojedynczego modułu:
+              <br />
+              <span class="color">{{product.singleModule}}</span>
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="product.amountModule">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Ilość modułów:
+
+              <span class="color">{{product.amountModule}}</span>
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="product.fullCapacity">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Całkowita pojemność pamięci:
+
+              <span class="color">{{product.fullCapacity}}</span>
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="product.amountCoolers">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Ilość wentylatorów chłodzących:
+
+              <span class="color">{{product.amountCoolers}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.amount525">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Ilość kieszeni 5.25:
+
+              <span class="color">{{product.amount525}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.amount35">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Ilość kieszeni 3.5 wewnętrznych:
+
+              <span class="color">{{product.amount35}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.discRotation">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Prędkość obrotowa:
+
+              <span class="color">{{product.discRotation}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.maxSpeedTransmision">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+
+
+            <p>Maks. szybkość transmisji danych:
+              <br />
+              <span class="color">{{product.maxSpeedTransmision}}</span>
+            </p>
+          </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="product.energyGain">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Zysk energetyczny:
+
+              <span class="color">{{product.energyGain}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.polarization">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Polaryzacja:
+
+              <span class="color">{{product.polarization}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.psGraphic">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Procesor graficzny:
+              <br />
+              <span class="color">{{product.psGraphic}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.psCpu">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Procesor:
+              <br />
+              <span class="color">{{product.psCpu}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.psRam">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Pamięć RAM:
+              <br />
+              <span class="color">{{product.psRam}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <!-- end -->
+
+        <!-- Coolers -->
+        <ng-container *ngIf="product.airFlow">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Przepływ powietrza:
+
+              <span class="color">{{product.airFlow}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.coolerSize">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Rozmiar wiatraka:
+
+              <span class="color">{{product.coolerSize}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.rotationSpeed">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Prędkość wiatraka:
+
+              <span class="color">{{product.rotationSpeed}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <!-- end -->
+        <!-- CPUs -->
+        <ng-container *ngIf="product.modelCpu">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Model procesora:
+
+              <span class="color">{{product.modelCpu}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.socket">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Gniazdo procesora:
+
+              <span class="color">{{product.socket}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.cores">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Ilość rdzeni:
+
+              <span class="color">{{product.cores}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="product.cpuFrequency">
+          <div>
+            <i class="material-icons arrow-my">keyboard_arrow_right</i>
+            <p>Częstotliwość taktowania procesora:
+
+              <span class="color">{{product.cpuFrequency}}</span>
+            </p>
+
+          </div>
+
+        </ng-container>
+        <!-- end -->
+      </div>
+
+
+    </div>
+
+    <!-- Name -->
+    <div class="col-lg-6 col-12 order-lg-2 order-3">
+      <div class="imageCarousel">
+        <ng-container *ngIf="product.images">
+          <ngb-carousel class="my-auto">
+            <ng-template ngbSlide *ngFor="let image of product.images | slice: 1">
+              
+              <img [src]="image" class="mx-auto">
+
+            </ng-template>
+
+          </ngb-carousel>
+        </ng-container>
+        <ng-container *ngIf="product.image">
+
+          <img [src]="product.image">
+
+
+        </ng-container>
+      </div>
+    </div>
+    <!-- Product price, add-to-cart -->
+    <div class="col-lg-3 col-sm-6 col-12 order-lg-3 order-2 rightSide" *ngIf="shoppingCart">
+      <div class="price">
+        <div class="itemPrice">
+          <ng-container *ngIf="product.promotion">
+            <p class="priceItem">{{ product.promotion | floatNumbers }} zł</p>
+            <p class="promotion">{{ product.price | floatNumbers}} zł</p>
+
+          </ng-container>
+          <ng-container *ngIf="!product.promotion">
+
+            <p>{{ product.price | floatNumbers }} zł</p>
+          </ng-container>
+
+        </div>
+
+        <ng-container>
+
+          <div class="averageRate">
+
+            <ngb-rating class="starRate" [(rate)]="average" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="true"></ngb-rating>
+            {{ average | number: '1.1-2'}}
+          </div>
+        </ng-container>
+
+      </div>
+      <div class="buttons">
+        <p class="productText">
+          Zamówienie wysyłamy najczęściej w pierwszy dzień roboczy!
+        </p>
+        <p class="productText">
+          Produkt dostępny, duża ilość na magazynie.
+        </p>
+        <p>
+          <button mat-raised-button color="primary" *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity" (click)="addToCart()"
+            class="my-button">Dodaj do koszyka</button>
+          <ng-template #updateQuantity>
+
+            <product-quantity [product]="product" [shopping-cart]="shoppingCart">
+
+            </product-quantity>
+
+          </ng-template>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

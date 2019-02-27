@@ -1,0 +1,1757 @@
+<div *ngIf="productId$ | async as product">
+  <div class="container">
+  <div class="detailsItem">
+      
+
+      <product-card [product]="product" [shopping-cart]="cart">
+      </product-card>
+
+      <div class="itemTable">
+        <div class="row">
+          <div class="col-lg">
+            <div class="productFeatures">Cechy produktu </div>
+            <table>
+              <tbody>
+                <ng-container *ngIf="product.producer">
+
+                  <tr>
+                    <td>Producent: </td>
+                    <td>{{ product.producer }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.warranty">
+
+                  <tr>
+                    <td>Gwarancja: </td>
+                    <td>{{ product.warranty }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.premiere">
+
+                  <tr>
+                    <td>Data premiery: </td>
+                    <td>{{ product.premiere }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeConnection">
+
+                  <tr>
+                    <td>Typ złącza: </td>
+                    <td>{{ product.typeConnection }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.producerChipset">
+
+                  <tr>
+                    <td>Producent chipsetu: </td>
+                    <td>{{ product.producerChipset }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.modelChipset">
+
+                  <tr>
+                    <td>Model chipsetu: </td>
+                    <td>{{ product.modelChipset }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.sizeMemory">
+
+                  <tr>
+                    <td>Wielkość pamięci: </td>
+                    <td>{{ product.sizeMemory }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeMemory">
+
+                  <tr>
+                    <td>Typ zastosowanej pamięci: </td>
+                    <td>{{ product.typeMemory }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.coreFrequency">
+
+                  <tr>
+                    <td>Taktowanie rdzenia: </td>
+                    <td>{{ product.coreFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.memoryFrequency">
+
+                  <tr>
+                    <td>Taktowanie pamięci: </td>
+                    <td>{{ product.memoryFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.dataBus">
+
+                  <tr>
+                    <td>Szyna danych pamięci: </td>
+                    <td>{{ product.dataBus }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.destinyAntena">
+
+                  <tr>
+                    <td>Przeznaczenie anteny: </td>
+                    <td>{{ product.destinyAntena }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.functions">
+                  <tr>
+                    <td style="vertical-align: top;">Funkcje urządzenia: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.functions">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.widthFormat">
+
+                  <tr>
+                    <td>Format szerokości: </td>
+                    <td>{{ product.widthFormat }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.type">
+
+                  <tr>
+                    <td>Typ: </td>
+                    <td>{{ product.type }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.content">
+                  <tr>
+                    <td style="vertical-align: top;">Zawartość pakietu: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.content">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeLicense">
+
+                  <tr>
+                    <td>Typ licencji: </td>
+                    <td>{{ product.typeLicense }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.kindLicense">
+
+                  <tr>
+                    <td>Rodzaj licencji: </td>
+                    <td>{{ product.kindLicense }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.timeLicense">
+
+                  <tr>
+                    <td>Okres licencji: </td>
+                    <td>{{ product.timeLicense }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.user">
+
+                  <tr>
+                    <td>Liczba użytkowników: </td>
+                    <td>{{ product.user }}</td>
+                  </tr>
+                </ng-container>
+
+
+                <ng-container *ngIf="product.tripod">
+
+                  <tr>
+                    <td>Statyw: </td>
+                    <td>{{ product.tripod }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.operationMode">
+                  <tr>
+                    <td style="vertical-align: top;">Tryb pracy: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.operationMode">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.windows">
+
+                  <tr>
+                    <td>Zainstalowany system operacyjny: </td>
+                    <td>{{ product.windows }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.wanInterface">
+
+                  <tr>
+                    <td>Interfejsy WAN: </td>
+                    <td>{{ product.wanInterface }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.wanPorts">
+
+                  <tr>
+                    <td>Ilość portów WAN: </td>
+                    <td>{{ product.wanPorts }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.lanInterface">
+
+                  <tr>
+                    <td>Interfejsy LAN: </td>
+                    <td>{{ product.lanInterface }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.lanPorts">
+
+                  <tr>
+                    <td>Ilość portów LAN 10/100/1000: </td>
+                    <td>{{ product.lanPorts }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.adsl">
+
+                  <tr>
+                    <td>Wbudowany model ADSL: </td>
+                    <td>{{ product.adsl }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.adslStandard">
+
+                  <tr>
+                    <td>Standard ADSL: </td>
+                    <td>{{ product.adslStandard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.accessPoint">
+
+                  <tr>
+                    <td>Wbudowany punkt dostępowy Wi-Fi: </td>
+                    <td>{{ product.accessPoint }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.screenDiagonal">
+
+                  <tr>
+                    <td>Przekątna ekranu LCD: </td>
+                    <td>{{ product.screenDiagonal }}</td>
+                  </tr>
+                </ng-container>
+                <!-- SCREEN -->
+                <ng-container *ngIf="product.screenResolution">
+                  <tr>
+
+                    <td>Natywna rozdzielczość ekranu: </td>
+                    <td>{{ product.screenResolution }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.screenType">
+                  <tr>
+
+                    <td>Powłoka ekranu: </td>
+                    <td>{{ product.screenType }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.matrixType">
+                  <tr>
+
+                    <td>Rodzaj matrycy: </td>
+                    <td>{{ product.matrixType }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.backlight">
+                  <tr>
+
+                    <td>Rodzaj podświetlenia: </td>
+                    <td>{{ product.backlight }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.hasSpeakers">
+                  <tr>
+
+                    <td>Głośniki: </td>
+                    <td>{{ product.hasSpeakers }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.spotSize">
+                  <tr>
+
+                    <td>Wielkość plamki: </td>
+                    <td>{{ product.spotSize }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.filckerReduction">
+                  <tr>
+
+                    <td>Redukcja migotania: </td>
+                    <td>{{ product.filckerReduction }}</td>
+                  </tr>
+
+                </ng-container>
+                <ng-container *ngIf="product.touch">
+                  <tr>
+
+                    <td>Ekran dotykowy: </td>
+                    <td>{{ product.touch }}</td>
+                  </tr>
+
+                </ng-container>
+
+                <!-- -->
+                <!-- LaptopCPU -->
+                <ng-container *ngIf="product.laptopCpu">
+                  <ng-container *ngIf="product.laptopCpu.type">
+                    <tr>
+
+                      <td>Typ procesora: </td>
+                      <td>{{ product.laptopCpu.type }}</td>
+                    </tr>
+                  </ng-container>
+                  <ng-container *ngIf="product.laptopCpu.model">
+                    <tr>
+
+                      <td>Model procesora: </td>
+                      <td>{{ product.laptopCpu.model }}</td>
+                    </tr>
+                  </ng-container>
+                  <ng-container *ngIf="product.laptopCpu.cores">
+                    <tr>
+
+                      <td>Ilość rdzeni: </td>
+                      <td>{{ product.laptopCpu.cores }}</td>
+                    </tr>
+                  </ng-container>
+                </ng-container>
+
+                <!--  -->
+
+                <ng-container *ngIf="product.energyGain">
+
+                  <tr>
+                    <td>Zysk energetyczny: </td>
+                    <td>{{ product.energyGain }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.polarization">
+
+                  <tr>
+                    <td>Polaryzacja: </td>
+                    <td>{{ product.polarization }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.horizontalAngle">
+
+                  <tr>
+                    <td>Kąt promienia w płaszczyźnie poziomej: </td>
+                    <td>{{ product.horizontalAngle }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.verticalAngle">
+
+                  <tr>
+                    <td>Kąt promienia w płaszczyźnie poziomej: </td>
+                    <td>{{ product.verticalAngle }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.vswr">
+
+                  <tr>
+                    <td>VSWR: </td>
+                    <td>{{ product.vswr }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.connector">
+
+                  <tr>
+                    <td>Złącze: </td>
+                    <td>{{ product.connector }}</td>
+                  </tr>
+                </ng-container>
+                <!-- Games -->
+                <ng-container *ngIf="product.platform">
+
+                  <tr>
+                    <td>Platforma: </td>
+                    <td>{{ product.platform }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.language">
+
+                  <tr>
+                    <td>Wersja językowa: </td>
+                    <td>{{ product.language }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.buttons">
+
+                  <tr>
+                    <td>Przyciski: </td>
+                    <td>{{ product.buttons }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeCommunication">
+
+                  <tr>
+                    <td>Rodzaj komunikacji: </td>
+                    <td>{{ product.typeCommunication }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountSpeaker">
+
+                  <tr>
+                    <td>Ilość głośników: </td>
+                    <td>{{ product.amountSpeaker }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountSatellite">
+
+                  <tr>
+                    <td>Ilość głośników satelitarnych: </td>
+                    <td>{{ product.amountSatellite }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.hasSubwoofer">
+
+                  <tr>
+                    <td>Głośnik niskotonowy [subwoofer]: </td>
+                    <td>{{ product.hasSubwoofer }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.powerSatellite">
+
+                  <tr>
+                    <td>Moc głośnika satelitarnego RMS: </td>
+                    <td>{{ product.powerSatellite }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.powerCentral">
+
+                  <tr>
+                    <td>Moc głośnika centralnego RMS: </td>
+                    <td>{{ product.powerCentral }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.powerSubwoofer">
+
+                  <tr>
+                    <td>Moc głośnika niskotonowego RMS: </td>
+                    <td>{{ product.powerSubwoofer }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.minFrequency">
+
+                  <tr>
+                    <td>Min. częstotliwość przenoszenia: </td>
+                    <td>{{ product.minFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxFrequency">
+
+                  <tr>
+                    <td>Maks. częstotliwość przenoszenia: </td>
+                    <td>{{ product.maxFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.regulation">
+
+                  <tr>
+                    <td>Regulacja głośności: </td>
+                    <td>{{ product.regulation }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.headphones">
+
+                  <tr>
+                    <td>Wyjście słuchawkowe: </td>
+                    <td>{{ product.headphones }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.dpi">
+
+                  <tr>
+                    <td>Rozdzielczość pracy: </td>
+                    <td>{{ product.dpi }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.usedTech">
+
+                  <tr>
+                    <td>Zastosowane technologie: </td>
+                    <td>{{ product.usedTech }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.signal">
+
+                  <tr>
+                    <td>Zasięg nadajnika: </td>
+                    <td>{{ product.signal }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountButtons">
+
+                  <tr>
+                    <td>Liczba przycisków: </td>
+                    <td>{{ product.amountButtons }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.scrool">
+
+                  <tr>
+                    <td>Rolka przewijania: </td>
+                    <td>{{ product.scrool }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.ergShape">
+
+                  <tr>
+                    <td>Ergonomiczny kształt: </td>
+                    <td>{{ product.ergShape }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.interface">
+
+                  <tr>
+                    <td>Interfejs: </td>
+                    <td>{{ product.interface }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.version">
+
+                  <tr>
+                    <td>Wersja produktu: </td>
+                    <td>{{ product.version }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.platforms">
+                  <tr>
+                    <td style="vertical-align: top;">Platforma: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.platforms">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.onSystem">
+                  <tr>
+                    <td style="vertical-align: top;">Specyfikacja systemu: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.onSystem">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.manufacturer">
+
+                  <tr>
+                    <td>Producent układu: </td>
+                    <td>{{ product.manufacturer }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.minCpu">
+
+                  <tr>
+                    <td>Min. wymagany procesor: </td>
+                    <td>{{ product.minCpu }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.sampling">
+
+                  <tr>
+                    <td>Próbkowanie: </td>
+                    <td>{{ product.sampling }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.samplingFrequency">
+
+                  <tr>
+                    <td>Częstotliwość próbkowania: </td>
+                    <td>{{ product.samplingFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.singalNoise">
+
+                  <tr>
+                    <td>Odstęp sygnału od szumu: </td>
+                    <td>{{ product.singalNoise }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountSpeakers">
+
+                  <tr>
+                    <td>Ilość obsługiwanych głośników: </td>
+                    <td>{{ product.amountSpeakers }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.strength">
+
+                  <tr>
+                    <td>Moc: </td>
+                    <td>{{ product.strength }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.ramMemory">
+
+                  <tr>
+                    <td>Rodzaj pamięci: </td>
+                    <td>{{ product.ramMemory }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.standard">
+
+                  <tr>
+                    <td>Standard: </td>
+                    <td>{{ product.standard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.standardVersion">
+
+                  <tr>
+                    <td>Wersja standardu: </td>
+                    <td>{{ product.standardVersion }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.standards">
+                  <tr>
+                    <td style="vertical-align: top;">Standard: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.standards">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.connectors">
+                  <tr>
+                    <td style="vertical-align: top;">Wtyczka zasilania [pin]: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.connectors">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.speed2">
+
+                  <tr>
+                    <td>Szybkość dla 2.4 GHz: </td>
+                    <td>{{ product.speed2 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.singleModule">
+
+                  <tr>
+                    <td>Pojemność pojedynczego modułu: </td>
+                    <td>{{ product.singleModule }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountModule">
+
+                  <tr>
+                    <td>Ilość modułów: </td>
+                    <td>{{ product.amountModule }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.fullCapacity">
+
+                  <tr>
+                    <td>Całkowita pojemność pamięci: </td>
+                    <td>{{ product.fullCapacity }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountContact">
+
+                  <tr>
+                    <td>Ilość kontaktów [pin]: </td>
+                    <td>{{ product.amountContact }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.ramFrequency">
+
+                  <tr>
+                    <td>Częstotliwość pracy: </td>
+                    <td>{{ product.ramFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.ramCapacity">
+
+                  <tr>
+                    <td>Przepustowość: </td>
+                    <td>{{ product.ramCapacity }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.latency">
+
+                  <tr>
+                    <td>Opóźnienie - cycle latency: </td>
+                    <td>{{ product.latency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.timings">
+
+                  <tr>
+                    <td>Timingi: </td>
+                    <td>{{ product.timings }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.pfc">
+
+                  <tr>
+                    <td>Funkcja PFC: </td>
+                    <td>{{ product.pfc }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typePfc">
+
+                  <tr>
+                    <td>Typ PFC: </td>
+                    <td>{{ product.typePfc }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.filters">
+                  <tr>
+                    <td style="vertical-align: top;">Filtry: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.filters">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountCoolers">
+
+                  <tr>
+                    <td>Ilość wentylatorów chłodzących: </td>
+                    <td>{{ product.amountCoolers }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.diameterCooler">
+
+                  <tr>
+                    <td>Średnica wentylatorów: </td>
+                    <td>{{ product.diameterCooler }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.regulationCooler">
+
+                  <tr>
+                    <td>Regulacja obrotów wentylatorów: </td>
+                    <td>{{ product.regulationCooler }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.plus33">
+
+                  <tr>
+                    <td>Natężenie przy napięciu +3.3V: </td>
+                    <td>{{ product.plus33 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.plus5">
+
+                  <tr>
+                    <td>Natężenie przy napięciu +5V: </td>
+                    <td>{{ product.plus5 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.plus12">
+
+                  <tr>
+                    <td>Natężenie przy napięciu +12V1: </td>
+                    <td>{{ product.plus12 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.minus12">
+
+                  <tr>
+                    <td>Natężenie przy napięciu -12V: </td>
+                    <td>{{ product.minus12 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.plus5vsb">
+
+                  <tr>
+                    <td>Natężenie przy napięciu +5VSB: </td>
+                    <td>{{ product.plus5vsb }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.mtbf">
+
+                  <tr>
+                    <td>MTBF: </td>
+                    <td>{{ product.mtbf }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.performance">
+
+                  <tr>
+                    <td>Certyfikat wydajności: </td>
+                    <td>{{ product.performance }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amount525">
+
+                  <tr>
+                    <td>Ilość kieszeni 5.25: </td>
+                    <td>{{ product.amount525 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amount35">
+
+                  <tr>
+                    <td>Ilość kieszeni 3.5 wewnętrznych: </td>
+                    <td>{{ product.amount35 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.portsFront">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza na przednim panelu: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.portsFront">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.installedCoolers">
+                  <tr>
+                    <td style="vertical-align: top;">Zainstalowane komponenty: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.installedCoolers">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.options">
+                  <tr>
+                    <td style="vertical-align: top;">Dostępne opcje: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.options">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.speed5">
+
+                  <tr>
+                    <td>Szybkość dla 5 GHz: </td>
+                    <td>{{ product.speed5 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.frequency">
+
+                  <tr>
+                    <td>Częstotliwość: </td>
+                    <td>{{ product.frequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxSpeedTransmision">
+
+                  <tr>
+                    <td>Maks. szybkość transmisji danych: </td>
+                    <td>{{ product.maxSpeedTransmision }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.modulation">
+                  <tr>
+                    <td style="vertical-align: top;">Modulacja: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.modulation">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.encryption">
+                  <tr>
+                    <td style="vertical-align: top;">Szyfrowanie: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.encryption">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.outputPower">
+
+                  <tr>
+                    <td>Moc wyjściowa: </td>
+                    <td>{{ product.outputPower }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.genres">
+                  <tr>
+                    <td style="vertical-align: top;">Gatunek: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.genres">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.drive">
+
+                  <tr>
+                    <td>Nośnik: </td>
+                    <td>{{ product.drive }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.standardMb">
+
+                  <tr>
+                    <td>Standard płyty: </td>
+                    <td>{{ product.standardMb }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.socketMb">
+
+                  <tr>
+                    <td>Gniazdo procesora: </td>
+                    <td>{{ product.socketMb }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cpus">
+                  <tr>
+                    <td style="vertical-align: top;">Obsługiwane procesory: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.cpus">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxCpu">
+
+                  <tr>
+                    <td>Maks. ilość obsługiwanych procesorów: </td>
+                    <td>{{ product.maxCpu }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.chipset">
+
+                  <tr>
+                    <td>Chipset płyty głównej: </td>
+                    <td>{{ product.chipset }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.crossfire">
+
+                  <tr>
+                    <td>Obsługa technologii CrossFire: </td>
+                    <td>{{ product.crossfire }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.sli">
+
+                  <tr>
+                    <td>Obsługa technologii SLI: </td>
+                    <td>{{ product.sli }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.socketRam">
+
+                  <tr>
+                    <td>Rodzaj obsługiwanej pamięci: </td>
+                    <td>{{ product.socketRam }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.rams">
+                  <tr>
+                    <td style="vertical-align: top;">Typ obsługiwanej pamięci: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.rams">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.fourChannelRam">
+
+                  <tr>
+                    <td>Czterokanałowa obsługa pamięci: </td>
+                    <td>{{ product.fourChannelRam }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.numberRam">
+
+                  <tr>
+                    <td>Ilość gniazd pamięci: </td>
+                    <td>{{ product.numberRam }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxRam">
+
+                  <tr>
+                    <td>Maks. pojemność pamięci: </td>
+                    <td>{{ product.maxRam }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.portsPci">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza PCI-E (liczba slotów): </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.portsPci">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.portsDisc">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza dla dysków i napędów: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.portsDisc">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.raid">
+
+                  <tr>
+                    <td>obsługa Raid: </td>
+                    <td>{{ product.raid }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.integratedNetwork">
+
+                  <tr>
+                    <td>Zintegrowana karta sieciowa: </td>
+                    <td>{{ product.integratedNetwork }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.transmision">
+                  <tr>
+                    <td style="vertical-align: top;">Transmisja danych: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.transmision">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.integratedSound">
+
+                  <tr>
+                    <td>Zintegrowana karta dźwiękowa: </td>
+                    <td>{{ product.integratedSound }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.wirelessCard">
+                  <tr>
+                    <td style="vertical-align: top;">Karta bezprzewodowa: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.wirelessCard">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.portsBack">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza na tylnym panelu: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.portsBack">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.portsMb">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza na płycie głównej: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.portsMb">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.powerMb">
+
+                  <tr>
+                    <td>Wtyczna zasilania: </td>
+                    <td>{{ product.powerMb }}</td>
+                  </tr>
+                </ng-container>
+
+                <!-- end games -->
+                <ng-container *ngIf="product.cpu">
+
+                  <tr>
+                    <td>Typ procesora: </td>
+                    <td>{{ product.cpu.name }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.modelCpu">
+
+                  <tr>
+                    <td>Model procesora: </td>
+                    <td>{{ product.modelCpu }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cores">
+
+                  <tr>
+                    <td>Ilość rdzeni: </td>
+                    <td>{{ product.cores }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.graphic">
+
+                  <tr>
+                    <td>Karta graficzna: </td>
+                    <td>{{ product.graphic }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.graphicMemory">
+
+                  <tr>
+                    <td>Pamięć karty graficznej: </td>
+                    <td>{{ product.graphicMemory }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.graphicIntegrated">
+
+                  <tr>
+                    <td>Zintegrowana karta graficzna: </td>
+                    <td>{{ product.graphicIntegrated }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.graphicPort">
+
+                  <tr>
+                    <td>Wyjścia karty graficznej: </td>
+                    <td>{{ product.graphicPort }}</td>
+                  </tr>
+                </ng-container>
+                <!-- Multiple array -->
+                <ng-container *ngIf="product.graphicPorts">
+                  <tr>
+                    <td style="vertical-align: top;">Wyjścia karty graficznej: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.graphicPorts">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <!-- -->
+                <ng-container *ngIf="product.discType">
+
+                  <tr>
+                    <td>Rodzaj dysku twardego: </td>
+                    <td>{{ product.discType }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.discInterface">
+
+                  <tr>
+                    <td>Interfejs dysku twardego: </td>
+                    <td>{{ product.discInterface }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.psCpu">
+
+                  <tr>
+                    <td>Procesor: </td>
+                    <td>{{ product.psCpu }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psGraphic">
+
+                  <tr>
+                    <td>Procesor graficzny: </td>
+                    <td>{{ product.psGraphic }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psRam">
+
+                  <tr>
+                    <td>Pamięć RAM: </td>
+                    <td>{{ product.psRam }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psDisc">
+
+                  <tr>
+                    <td>Dysk twardy: </td>
+                    <td>{{ product.psDisc }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psPorts">
+
+                  <tr>
+                    <td>Ilość portów: </td>
+                    <td>{{ product.psPorts }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.wifi">
+
+                  <tr>
+                    <td>WiFi: </td>
+                    <td>{{ product.wifi }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.hdtv">
+
+                  <tr>
+                    <td>HDTV: </td>
+                    <td>{{ product.hdtv }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psSound">
+                  <tr>
+                    <td style="vertical-align: top;">Dźwięk: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.psSound">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+
+
+                <ng-container *ngIf="product.discCapacity">
+
+                  <tr>
+                    <td>Pojemność dysku: </td>
+                    <td>{{ product.discCapacity }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.family">
+
+                  <tr>
+                    <td>Rodzina produktów: </td>
+                    <td>{{ product.family }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.discRotation">
+
+                  <tr>
+                    <td>Prędkość obrotowa: </td>
+                    <td>{{ product.discRotation }}</td>
+                  </tr>
+                </ng-container>
+
+                <!-- multiple key value -->
+                <ng-container *ngIf="product.ram">
+                  <ng-container *ngIf="product.ram.sizeRam">
+                    <tr>
+                      <td>Wielkość pamięci RAM: </td>
+                      <td>{{ product.ram.sizeRam }}</td>
+                    </tr>
+                  </ng-container>
+                  <ng-container *ngIf="product.ram.typeRam">
+                    <tr>
+                      <td>Typ zastosowanej pamięci RAM: </td>
+                      <td>{{ product.ram.typeRam }}</td>
+                    </tr>
+                  </ng-container>
+                </ng-container>
+                <!-- END -->
+
+                <!-- Multiple array -->
+                <ng-container *ngIf="product.ports">
+                  <tr>
+                    <td style="vertical-align: top;">Złącza: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.ports">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <!-- END -->
+                <ng-container *ngIf="product.port">
+
+                  <tr>
+                    <td>Złącza: </td>
+                    <td>{{ product.port }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.contrast">
+
+                  <tr>
+                    <td>Kontrast: </td>
+                    <td>{{ product.contrast }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.brightness">
+
+                  <tr>
+                    <td>Jasność: </td>
+                    <td>{{ product.brightness }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.spotTime">
+
+                  <tr>
+                    <td>Czas reakcji plamki: </td>
+                    <td>{{ product.spotTime }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.viewVerAngle">
+
+                  <tr>
+                    <td>Kąt widzenia pionowy: </td>
+                    <td>{{ product.viewVerAngle }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.viewHorAngle">
+
+                  <tr>
+                    <td>Kąt widzenia poziomy: </td>
+                    <td>{{ product.viewHorAngle }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.amountColors">
+
+                  <tr>
+                    <td>Ilość wyświetlanych kolorów: </td>
+                    <td>{{ product.amountColors }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cable">
+
+                  <tr>
+                    <td>Długość przewodu: </td>
+                    <td>{{ product.cable }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.moduleDrive">
+
+                  <tr>
+                    <td>Moduł sterujący: </td>
+                    <td>{{ product.moduleDrive }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.noiseReduction">
+
+                  <tr>
+                    <td>Redukcja szumów: </td>
+                    <td>{{ product.noiseReduction }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.band">
+
+                  <tr>
+                    <td>Pasmo przenoszenia: </td>
+                    <td>{{ product.band }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.dolbyDigital">
+
+                  <tr>
+                    <td>Dekoder Dolby Digital 5.1: </td>
+                    <td>{{ product.dolbyDigital }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.hdcp">
+
+                  <tr>
+                    <td>Wsparcie dla HDCP: </td>
+                    <td>{{ product.hdcp }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.graphicStandard">
+                  <tr>
+                    <td style="vertical-align: top;">Obsługiwane standardy: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.graphicStandard">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeCooler">
+
+                  <tr>
+                    <td>Typ chłodzenia: </td>
+                    <td>{{ product.typeCooler }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.coolerSize">
+
+                  <tr>
+                    <td>Rozmiar wiatraka: </td>
+                    <td>{{ product.coolerSize }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.dimensions">
+
+                  <tr>
+                    <td>Wymiary: </td>
+                    <td>{{ product.dimensions }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxNoise">
+
+                  <tr>
+                    <td>Maksymalny poziom głośności: </td>
+                    <td>{{ product.maxNoise }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.rotationSpeed">
+
+                  <tr>
+                    <td>Maks. prędkość obrotowa: </td>
+                    <td>{{ product.rotationSpeed }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.airFlow">
+
+                  <tr>
+                    <td>Maks. przepływ powietrza CFM: </td>
+                    <td>{{ product.airFlow }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.coolerLife">
+
+                  <tr>
+                    <td>Żywotność wentylatora: </td>
+                    <td>{{ product.coolerLife }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.tension">
+
+                  <tr>
+                    <td>Napięcie: </td>
+                    <td>{{ product.tension }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.radiator">
+
+                  <tr>
+                    <td>Radiator: </td>
+                    <td>{{ product.radiator }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.typeCpu">
+
+                  <tr>
+                    <td>Typ procesora: </td>
+                    <td>{{ product.typeCpu }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.socket">
+
+                  <tr>
+                    <td>Typ gniazda: </td>
+                    <td>{{ product.socket }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.litography">
+
+                  <tr>
+                    <td>Proces technologiczny: </td>
+                    <td>{{ product.litography }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cpuFrequency">
+
+                  <tr>
+                    <td>Częstotliwość taktowania procesora: </td>
+                    <td>{{ product.cpuFrequency }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.frequencyTurbo">
+
+                  <tr>
+                    <td>Częstotliwość taktowania Turbo: </td>
+                    <td>{{ product.frequencyTurbo }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.unlocked">
+
+                  <tr>
+                    <td>Odblokowany mnożnik: </td>
+                    <td>{{ product.unlocked }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.multiplier">
+
+                  <tr>
+                    <td>Mnożnik: </td>
+                    <td>{{ product.multiplier }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cache">
+
+                  <tr>
+                    <td>Pamięć cache: </td>
+                    <td>{{ product.cache }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cacheL2">
+
+                  <tr>
+                    <td>Pojemność pamięci cache L2: </td>
+                    <td>{{ product.cacheL2 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.cacheL3">
+
+                  <tr>
+                    <td>Pojemność pamięci cache L3: </td>
+                    <td>{{ product.cacheL3 }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.power">
+
+                  <tr>
+                    <td>Maksymalny pobór mocy: </td>
+                    <td>{{ product.power }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.maxTransfer">
+
+                  <tr>
+                    <td>Maks. transfer zewnętrzny: </td>
+                    <td>{{ product.maxTransfer }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.minVolume">
+
+                  <tr>
+                    <td>Minimalna głośność: </td>
+                    <td>{{ product.minVolume }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.addedCooler">
+
+                  <tr>
+                    <td>Dołączony wentylator: </td>
+                    <td>{{ product.addedCooler }}</td>
+                  </tr>
+                </ng-container>
+                <!-- Multiple array -->
+                <ng-container *ngIf="product.communication">
+                  <tr>
+                    <td style="vertical-align: top;">Komunikacja: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.communication">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <!-- END -->
+
+                <ng-container *ngIf="product.hasOpticalDrive">
+
+                  <tr>
+                    <td>Napęd optyczny: </td>
+                    <td>{{ product.hasOpticalDrive }}</td>
+                  </tr>
+                </ng-container>
+
+                <!-- Multiple array -->
+                <ng-container *ngIf="product.memoryCards">
+                  <tr>
+                    <td style="vertical-align: top;">Czytnik kart pamięci: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.memoryCards">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <!-- END -->
+                <ng-container *ngIf="product.memoryCard">
+
+                  <tr>
+                    <td>Czytnik kart pamięci: </td>
+                    <td>{{ product.memoryCard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.soundCard">
+
+                  <tr>
+                    <td>Dźwięk: </td>
+                    <td>{{ product.soundCard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.color">
+
+                  <tr>
+                    <td>Kolor: </td>
+                    <td>{{ product.color }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.material">
+
+                  <tr>
+                    <td>Materiał obudowy: </td>
+                    <td>{{ product.material }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.laptopColor">
+
+                  <tr>
+                    <td>Stylistyka pokrywy: </td>
+                    <td>{{ product.laptopColor }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.lcdColor">
+
+                  <tr>
+                    <td>Kolor ramki wokół wyświetlacza: </td>
+                    <td>{{ product.lcdColor }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.colorAroundKeyboard">
+
+                  <tr>
+                    <td>Kolor wokół klawiatury: </td>
+                    <td>{{ product.colorAroundKeyboard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.illuminatedKeyboard">
+
+                  <tr>
+                    <td>Podświetlana klawiatura: </td>
+                    <td>{{ product.illuminatedKeyboard }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.resolution">
+
+                  <tr>
+                    <td>Rozdzielczość: </td>
+                    <td>{{ product.resolution }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.psFormat">
+
+                  <tr>
+                    <td>Obsługiwane formaty: </td>
+                    <td>{{ product.psFormat }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.width">
+
+                  <tr>
+                    <td>Szerokość: </td>
+                    <td>{{ product.width }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.lenght">
+
+                  <tr>
+                    <td>Długość: </td>
+                    <td>{{ product.lenght }}</td>
+                  </tr>
+                </ng-container>
+
+                <ng-container *ngIf="product.height">
+
+                  <tr>
+                    <td>Wysokość: </td>
+                    <td>{{ product.height }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.depth">
+
+                  <tr>
+                    <td>Głębokość: </td>
+                    <td>{{ product.depth }}</td>
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.weight">
+
+                  <tr>
+                    <td>Waga: </td>
+                    <td>{{ product.weight }}</td>
+                  </tr>
+                </ng-container>
+                <!-- Multiple array -->
+                <ng-container *ngIf="product.additionalEquipment">
+                  <tr>
+                    <td style="vertical-align: top;">Dodatkowe wyposażenie: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.additionalEquipment">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <!-- END -->
+                <ng-container *ngIf="product.accessories">
+                  <tr>
+                    <td style="vertical-align: top;">Akcesoria: </td>
+                    <td>
+                      <ng-container *ngFor="let item of product.accessories">
+                        <p>{{ item }}</p>
+                      </ng-container>
+                    </td>
+
+                  </tr>
+                </ng-container>
+                <ng-container *ngIf="product.age">
+
+                  <tr>
+                    <td>Kategoria wiekowa: </td>
+                    <td>{{ product.age }}</td>
+                  </tr>
+                </ng-container>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="productFeatures">Opinie użytkowników</div>
+      </div>
+
+      <product-reviews [product]="product"></product-reviews>
+    </div>
+  </div>
+</div>

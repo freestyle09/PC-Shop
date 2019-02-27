@@ -1,0 +1,57 @@
+@import '../../scss/_variables.scss';
+.shopSummary {
+  border: 3px solid $bg-color4;
+  border-radius: 12px;
+  padding: 20px;
+  .summaryEnd {
+    color: $color2;
+    font: {
+      family: $font-eczar;
+      size: 18px;
+      weight: bold;
+    }
+    margin-bottom: 20px;
+  }
+  .cartItems {
+    font: {
+      weight: 500;
+    }
+    padding-bottom: 10px;
+    border-bottom: 2px solid $bg-color4;
+  }
+  .totalPrice {
+    padding-top: 20px;
+    font: {
+      weight: 500;
+    }
+  }
+  .items {
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 2px solid $bg-color4;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  
+}
+
+@media (max-width: 575.98px) {
+  .shopSummary {
+
+    padding: 20px;
+
+    .items {
+      padding: 5px 0;
+      font-size: 14px;
+
+    }
+  }
+  
+}

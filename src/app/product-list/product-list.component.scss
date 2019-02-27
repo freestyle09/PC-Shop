@@ -1,0 +1,277 @@
+@import '../../scss/_variables.scss';
+.items {
+    margin: 0;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: .1px solid rgb(214, 214, 214);
+    .imageProduct {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        .images {
+            img {
+                max-height: 170px;
+                max-width: 230px;
+            }
+        }
+    }
+}
+
+.productProperties2 {
+    padding: 0;
+    margin: 0;
+    .productsProperties {
+        padding-top: 10px;
+        padding-left: 20px;
+        font: {
+            family: $font-OpenSans;
+            weight: 400;
+        }
+        .linkItem {
+            color: $color4;
+            text-decoration: none;
+            padding: {
+                top: 20px;
+            }
+            &:hover {
+                color: $color2;
+            }
+            font: {
+                family: $font-eczar;
+                weight: bold;
+                size: 24px;
+            }
+        }
+        .description {
+            padding: {
+                left: 10px;
+                top: 20px;
+            }
+            font: {
+                size: 14px;
+            }
+            .arrow-my {
+                vertical-align: middle;
+                font-size: 14px;
+                color: $color2;
+            }
+            .color {
+                color: $color2;
+                font-weight: 600;
+            }
+            &>div {
+                padding-top: 4px;
+                &>p {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+.rightSide {
+    padding: 0;
+    margin: 0;
+    padding-right: 20px;
+    .price {
+        width: 100%;
+        height: 50%;
+        display: inline-block;
+        text-align: right;
+        font: {
+            family: $font-chewy;
+        }
+        .itemPrice {
+            color: $color2;
+            padding-bottom: 10px;
+            font: {
+                weight: bold;
+                size: 28px;
+            }
+            .priceItem {
+                text-decoration: line-through;
+                color: $bg-color3;
+            }
+        }
+        .averageRate {
+            .starRate {
+                color: $color2;
+                font-size: 20px;
+            }
+        }
+    }
+    .buttons {
+        width: 100%;
+        height: 50%;
+        & p:first-child {
+            margin-bottom: 10px;
+        }
+        &>p {
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        min-width: 100%;
+    }
+    .items {
+        .imageProduct {
+            .images {
+                img {
+                    max-height: 150px;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+    .buttons {
+        &>p {}
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .items {
+        height: auto;
+        padding: 10px 0;
+        .imageProduct {
+            height: 200px;
+            .images {
+                img {
+                    max-height: 200px;
+                    max-width: 200px;
+                }
+            }
+        }
+        .rightSide {
+            padding-right: 0px;
+            .price {
+                height: auto;
+                float: right;
+                .itemPrice {
+                    font: {}
+                    .priceItem {}
+                }
+                .averageRate {
+                    .starRate {}
+                }
+            }
+            .buttons {
+                float: left;
+                height: auto;
+                margin: 0;
+                &>p:last-child {
+                    float: right;
+                }
+            }
+        }
+        .productProperties2 {
+            margin: 40px 0;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .items {
+        .imageProduct {
+            .images {
+                margin-bottom: 10px;
+                img {
+                    max-height: 200px;
+                    max-width: 200px;
+                }
+            }
+        }
+        .rightSide {
+            padding-right: 10px;
+            .price {
+                height: auto;
+                float: left;
+                .itemPrice {
+                    font: {}
+                    .priceItem {}
+                }
+                .averageRate {
+                    .starRate {}
+                }
+            }
+            .buttons {
+                height: auto;
+                margin: 0;
+                &>p:last-child {
+                    float: right;
+                }
+            }
+        }
+        .productProperties2 {
+            padding: 40px 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .items {
+        .imageProduct {
+            .images {
+                img {
+                    max-height: 150px;
+                    max-width: 150px;
+                }
+            }
+        }
+        .rightSide {
+            padding-right: 0px;
+            float: left;
+            .price {
+                height: auto;
+                text-align: center;
+                .itemPrice {
+                    font: {}
+                    .priceItem {}
+                }
+                .averageRate {
+                    .starRate {}
+                }
+            }
+            .buttons {
+                height: auto;
+                &>p {
+                    text-align: center;
+                }
+            }
+        }
+        .productProperties2 {
+            text-align: left;
+            .productsProperties {
+                text-align: center;
+                padding: 10px 10px;
+                font: {
+                    family: $font-OpenSans;
+                    weight: 400;
+                }
+                .linkItem {
+                    font: {
+                        size: 18px;
+                    }
+                }
+                .description {
+                    padding: 5px;
+                    font: {
+                        size: 14px;
+                    }
+                    .arrow-my {
+                        font-size: 14px;
+                    }
+                    .color {
+                        display: block;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

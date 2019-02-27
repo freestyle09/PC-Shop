@@ -1,0 +1,30 @@
+<div class="header-menu">
+  <div class="container ">
+    <div class="row justify-content-center">
+
+      <div class="menu-list d-flex align-self-center" *ngFor="let c of categories$ | async">
+
+        <a [routerLink]="['/categories/', c.$key]" class="d-none d-lg-inline">{{c.name}}</a>
+
+
+      </div>
+    </div>
+    <div class="row d-block d-sm-block d-md-block d-lg-none ">
+      <div ngbDropdown class="d-flex justify-content-center">
+        <button class="menu-button" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menuDrop">
+          <a class="dropdown-item" *ngFor="let item of categories$ | async" [routerLink]="['categories/', item.$key]">{{item.name}}</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="spinner d-md-none d-lg-inline" *ngIf="showSpinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+
+    </div>
+  </div>
+</div>

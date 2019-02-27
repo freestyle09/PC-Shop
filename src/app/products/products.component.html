@@ -1,0 +1,73 @@
+<!-- <ng-container *ngIf="name === 'laptops'"> -->
+
+<!-- <p *ngFor="let lc of itemCategories$ | async">
+  <a [routerLink]="['/products/', lc.$key]"> {{lc.name}}</a>
+</p> -->
+
+<section id="menu">
+  <div class="container">
+    <div class="row">
+      <div class="menu col-lg">
+
+        <ng-container *ngIf="name === 'forplayers'">
+          <div class="menu-header">Dla graczy</div>
+        </ng-container>
+        <ng-container *ngIf="name === 'laptops'">
+
+          <div class="menu-header">Laptopy</div>
+        </ng-container>
+        <ng-container *ngIf="name === 'pcparts'">
+          <div class="menu-header">Części PC</div>
+
+        </ng-container>
+        <ng-container *ngIf="name === 'pcs'">
+          <div class="menu-header">Komputery</div>
+
+        </ng-container>
+        <ng-container *ngIf="name === 'networks'">
+          <div class="menu-header">Sieci i komunikacja</div>
+
+        </ng-container>
+        <ng-container *ngIf="name === 'peripherypcs'">
+          <div class="menu-header">Peryferia PC</div>
+
+        </ng-container>
+        <ng-container *ngIf="name === 'softwares'">
+          <div class="menu-header">Oprogramowanie</div>
+
+        </ng-container>
+
+        <hr class="style13">
+
+
+        <div class="col-xl-3 col-lg-4 col-md-6 item-menu" *ngFor="let lc of itemCategories$ | async">
+          <a [routerLink]="['/products/', lc.$key]">
+          <div class="card">
+            <div class="images">
+              <span class="helper"></span>
+              <img [src]="lc.imageUrl" />
+            </div>
+            <div class="card-body">
+              <p class="name-menu">
+                {{lc.name}}
+              </p>
+            </div>
+
+          </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- </ng-container> -->
+<!-- <ng-container *ngIf="name === 'pcs'"> -->
+<!-- <p *ngFor="let pc of pcCategories$ | async">
+    {{pc.name}}
+  </p>
+   -->
+<!-- </ng-container> -->

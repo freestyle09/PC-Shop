@@ -1,0 +1,15 @@
+<div class="shopSummary">
+  <div class="summaryEnd">Podsumowanie zamówienia</div>
+  <div class="cartItems">Masz {{cart.totalItemsCount}} produktów w swoim koszyku</div>
+  <div class="row items" *ngFor="let item of cart.items">
+    <div class="col-xl-9 col-lg-8 align-self-center">{{ item.quantity }} x {{ item.name }}</div>
+    <div class="col-xl-3 col-lg-4 d-flex justify-content-end align-self-center">{{ item.totalPrice | number: '1.2-2' }} zł</div>
+  </div>
+  <div class="row totalPrice">
+
+    <div class="col-lg-7 d-flex justify-content-end align-self-center">Całość zamówienia:</div>
+    <div class="col-lg d-flex justify-content-end align-self-center">
+      {{ cart.totalPrice | number: '1.2-2' }} zł
+    </div>
+  </div>
+</div>

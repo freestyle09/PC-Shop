@@ -1,0 +1,43 @@
+<form #f="ngForm">
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Imię i nazwisko" #name="ngModel" [(ngModel)]="shipping.name" name="name" type="text" required>
+    </mat-form-field>
+    <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+      <div *ngIf="name.errors.required">Wpisz swoje imię i nazwisko</div>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Ulica" #addressLine1="ngModel" name="addressLine1" [(ngModel)]="shipping.addressLine1" type="text"
+        required>
+    </mat-form-field>
+    <div class="alert alert-danger" *ngIf="addressLine1.touched && addressLine1.invalid">
+      <div *ngIf="addressLine1.errors.required">To pole jest wymagane!</div>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nr. domu" #addressLine2="ngModel" name="addressLine2" [(ngModel)]="shipping.addressLine2" type="text"
+        required>
+    </mat-form-field>
+    <div class="alert alert-danger" *ngIf="addressLine2.touched && addressLine2.invalid">
+      <div *ngIf="addressLine2.errors.required">To pole jest wymagane!</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Miejscowość" #city="ngModel" name="city" [(ngModel)]="shipping.city" type="text" required>
+    </mat-form-field>
+    <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+      <div *ngIf="city.errors.required">To pole jest wymagane!</div>
+    </div>
+
+  </div>
+  <button mat-raised-button color="primary" [disabled]="!f.valid" (click)="placeOrder()">Złóż zamówienie</button>
+
+</form>

@@ -1,0 +1,164 @@
+<section id="header">
+
+  <div class="header-stripe">
+    <div class="container" id="myContainer">
+      <div class="row">
+        <div class="col-xl-2 col-lg-4 col-md-3 col-sm-12 col-12 d-flex justify-content-md-start justify-content-center  phone">
+          <i class="material-icons align-self-center">ring_volume</i>
+          <span class="align-self-center"> +48 339 721 958</span>
+
+        </div>
+        <div class="col-xl col-lg col-md col-sm d-flex justify-content-md-end justify-content-center logging float-right ">
+          <div *ngIf="appUser" class="userLogged float-right align-self-center">
+            <p>Witaj
+              <span class="userName">{{user.displayName}}!</span>
+            </p>
+            <p>
+              <button (click)="logout()" mat-raised-button color="accent" class="btn-login">Wyloguj</button>
+            </p>
+          </div>
+
+          <div *ngIf="!appUser" class="userLogged float-right align-self-center ">
+            <!-- <button (click)="login()" class="btn-login">Zaloguj sie z Google</button> -->
+            <button (click)="login()" mat-raised-button color="accent" class="btn-login ">Zaloguj sie z Google</button>
+          </div>
+          <div class=" align-self-center d-none d-sm-block">
+            {{ today | date: 'longDate'}} | {{ today | date:'HH:mm:ss'}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-12 d-flex justify-content-lg-start justify-content-center order-lg-1 order-1">
+          <a routerLink="/">
+            <img src="https://storage.googleapis.com/staging.pc-shop-260af.appspot.com/logo-min.png">
+          </a>
+        </div>
+        <div class="col-lg-6 col-12 order-lg-2 order-3">
+          <div class="form">
+
+            <div class="input-group">
+              <input #query (keyup)="filter(query.value)" type="text" class="form-control searchInput" placeholder="Search..." [(ngModel)]="searchValue">
+              <i class="material-icons clear-button" (click)="clearSearch()">clear</i>
+            </div>
+            <ng-container *ngIf="query.value">
+              <div *ngFor="let f of filteredProducts">
+                <ul class="listFiltered">
+                  <li class="itemsInList d-flex ">
+                    <a [routerLink]="['/product-details/', f.category , f.$key]" (click)="clearSearch()" class="align-self-center">{{ f.name }}</a>
+                  </li>
+                </ul>
+
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="col-lg col-sm-6 col-12 d-flex justify-content-lg-end justify-content-center order-lg-3 order-2">
+          <a class="shoppingCart" routerLink="/shopping-cart">
+            <i class="material-icons shopIcon">shopping_cart</i>
+            <span class="badge badge-pill amountOfItems" *ngIf="cart$ | async as cart">
+              {{ cart.totalItemsCount }}
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav-bar></nav-bar>
+</section>
+
+
+<main role="main">
+
+  <router-outlet></router-outlet>
+
+</main>
+
+
+<footer>
+  <div class="container ">
+    <div class="footerTop ">
+      <div class="row d-flex justify-content-lg-center  justify-content-md-center justify-content-sm-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2">
+          <div class="textHeader">
+            O Aplikacji
+          </div>
+          <div class="tekst">
+            Aplikacja przedstawia demo sklepu internetowego, została ona stworzona w celach edukacyjnych niekomercyjnych, oraz w ramach
+            uzupełnienia portfolio i z pasji dla dziedziny Front-End.
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 d-none d-md-block">
+          <div class="textHeader">
+            Kategorie
+          </div>
+          <div class="tekst">
+            <p *ngFor="let item of categories$ | async">
+              <a class="footerMenu" [routerLink]="['/categories/', item.$key]">{{item.name}}</a>
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-5 col-12">
+          <div class="textHeader">
+            Kontakt
+          </div>
+          <div class="tekst">
+            <div class="info">
+              <i class="material-icons iconMy">contact_phone</i>
+              +48 339 721 958
+            </div>
+            <div class="info">
+              <i class="material-icons iconMy">email</i>
+              shoppc@pc.pl
+            </div>
+            <div class="info">
+              <i class="material-icons iconMy">access_time</i>
+              Pn-Pt 9:00 - 18:00
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="copyright d-flex align-items-center">
+    <div class="container">
+
+      <div class="row d-flex justify-content-md-center ">
+
+        <div class="col-lg-2 col-md-3 col-sm-3 col-12 d-flex justify-content-sm-start justify-content-center align-self-center mb-3 ">
+          <img src="https://storage.googleapis.com/staging.pc-shop-260af.appspot.com/logo-min.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-9 d-flex justify-content-sm-end justify-content-center align-self-center">
+          Wszelkie prawa zastrzeżone
+
+          <i class="material-icons copyrightIcon"> copyright </i> {{today | date: 'y'}} by Józef Rzadkosz</div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+<go-top-button [animate]="true" [speed]="30" [acceleration]="2" [scrollDistance]="300" [styles]="{
+    'position':'fixed',
+    'right': '30px',
+    'border-radius':'100px',
+    'line-height': '20px',
+    'background': 'rgba(0,0,0,0)'
+}">
+<img src="https://storage.googleapis.com/staging.pc-shop-260af.appspot.com/arrow-circle-up2.svg" style="width: 30px; height: 30px">
+</go-top-button>

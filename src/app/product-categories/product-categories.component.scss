@@ -1,0 +1,70 @@
+@import '../../scss/_variables.scss';
+#list {
+    margin-top: 70px;
+    .listItems {
+        background-color: $color-white;
+        -webkit-box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.42);
+        box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.42);
+        .listProducts {
+            height: 100px;
+            padding: {
+                left: 40px;
+                top: 30px;
+            }
+            border-bottom: 1px solid rgb(214, 214, 214);
+            font: {
+                family: $font-Montserrat;
+                size: 26px;
+                weight: 700;
+            }
+            .inbox {
+                color: $color2;
+                font-size: 50px;
+                vertical-align: middle;
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #list {
+
+        .listItems {
+
+            .listProducts {
+
+                font: {
+
+                    size: 22px;
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    #list {
+
+        .listItems {
+
+            .listProducts {
+                padding: 30px 5px;
+                text-align: center;
+                font: {
+
+                    size: 22px;
+
+                }
+                .inbox {
+                    color: $color2;
+                    font-size: 35px;
+
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+}

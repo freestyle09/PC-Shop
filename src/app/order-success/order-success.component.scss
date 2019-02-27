@@ -1,0 +1,55 @@
+@import '../../scss/_variables.scss';
+.orderSuccess {
+
+  background-color: $color-white;
+  padding: 50px;
+  -webkit-box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.42);
+  box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.42);
+  .success {
+    color: $color-success;
+    font: {
+      size: 32px;
+      weight: 600;
+      family: $font-eczar;
+    }
+    margin-bottom: 20px;
+  }
+  .orderIsComing {
+    color: $color-success;
+    font: {
+      size: 24px;
+      weight: 500;
+      family: $font-eczar;
+    }
+    margin-bottom: 30px;
+  }
+  .endApp {
+    line-height: 22px;
+    .topic {
+      color: $color2;
+      margin-bottom: 10px;
+      text: {
+          -webkit-transform: uppercase;
+              -ms-transform: uppercase;
+                  transform: uppercase;
+          align: center;
+      }
+      font: {
+        size: 24px;
+        weight: bold;
+        family: $font-eczar;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: $color;
+      &:hover {
+        color: $color2;
+      }
+    }
+  }
+  &:last-child {
+    margin-top: 20px;
+  }
+}

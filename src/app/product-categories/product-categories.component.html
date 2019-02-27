@@ -1,0 +1,18 @@
+<section id="list">
+  <div class="container">
+    <div class="listItems" *ngIf="cart$ | async as cart">
+      <div class="listProducts">
+          <i class="material-icons inbox">inbox</i>
+          Produkty polecane w tej kategorii
+      </div>
+
+      <!-- <hr style="height: 1px"> -->
+
+      <div *ngFor="let product of category">
+
+        <product-list [product]="product" [shopping-cart]="cart"></product-list>
+
+      </div>
+    </div>
+  </div>
+</section>

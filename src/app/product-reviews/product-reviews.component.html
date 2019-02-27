@@ -1,0 +1,85 @@
+<div class="productReviews mx-auto ">
+  <div class="row">
+    <div class="col-lg">
+      <ng-container *ngIf="items > 0">
+        <div class="ratings">
+          <p class="actualRate">
+            Aktualna ocena produktu:
+          </p>
+          <div class="form-group stars">
+            <ngb-rating [(rate)]="average" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="true"></ngb-rating>
+            {{ average | number: '1.1-2'}}
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="items === 0">
+        <div class="ratings">
+          <p class="actualRate">
+            Aktualnie brak opinii dla tego produktu, bądź pierwszy!
+          </p>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!appUser">
+        <div class="ratings">
+          <p class="actualRate text-danger">
+            Opinie mogą dodawać tylko zalogowani użytkownicy!
+          </p>
+
+        </div>
+      </ng-container>
+
+      <div class="form-group">
+        <ng-template #t let-fill="fill">
+          <span *ngIf="fill === 100" class="star full">&#9733;</span>
+          <span *ngIf="fill === 0" class="star">&#9733;</span>
+          <span *ngIf="fill < 100 && fill > 0" class="star">
+            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+          </span>
+        </ng-template>
+
+        <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="false" max="5"></ngb-rating>
+
+        <form #f="ngForm">
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <textarea matInput #item #description="ngModel" [(ngModel)]="review.description" name="description" maxlength="600" minlength="10"
+                type="text" placeholder="Dodaj opinię o produkcie..." required></textarea>
+            </mat-form-field>
+
+            <span *ngIf="description.dirty">Zostało {{600 - item.value.length}} znaków</span>
+
+            <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
+              <div *ngIf="description.errors.required">To pole jest wymagane</div>
+              <div *ngIf="description.errors.minlength">Musisz wpisać minimum 10 znaków</div>
+            </div>
+          </div>
+
+          <button mat-raised-button color="primary" (click)="addReview(); this.description.reset();" [disabled]="!appUser || currentRate === 0 || !f.valid">Dodaj opinię</button>
+        </form>
+      </div>
+
+
+
+      <ng-container *ngIf="items > 0" param="a">
+        <div class="userReviews" *ngFor="let review of product$ | async | reverse: param">
+          <span class="stars">
+            <ngb-rating [(rate)]="review.rate" [readonly]="true"></ngb-rating>
+          </span>
+          <span class="rate"> {{review.rate}}</span>
+
+          <p class="description">{{ review.description.description }}</p>
+          <br />
+          <ng-container *ngIf="review.user">
+            <p class="float-right userAdded">Dodał użytkownik:
+              <span class="user">{{ review.user }}</span>
+            </p>
+          </ng-container>
+          <hr>
+
+        </div>
+        <button mat-raised-button color="primary" *ngIf="items > 3 || param == 'b'" (click)="param = 'b'" class=" mb-4">Pokaż wszystkie</button>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

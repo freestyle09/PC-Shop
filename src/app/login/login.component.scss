@@ -1,0 +1,9 @@
+@import '../../scss/_variables.scss';
+.login {
+    margin-top: 50px;
+  color: $color-danger;
+  font: {
+    size: 24px;
+    weight: 600;
+  }
+}

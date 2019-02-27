@@ -1,0 +1,19 @@
+<div class="quantityButtons">
+  <div class="col-4 myc2">
+    <div class="myButtons">
+      <button (click)="removeFromCart()" class="buttonQuantity">
+        -
+      </button>
+    </div>
+  </div>
+  <div class="col-3 myc">
+    {{ shoppingCart.getQuantity(product) }}
+  </div>
+  <div class="col-4 myc3">
+    <div class="myButtons">
+      <button (click)="addToCart()" class="buttonQuantity">
+        +
+      </button>
+    </div>
+  </div>
+</div>

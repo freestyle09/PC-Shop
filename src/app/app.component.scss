@@ -1,0 +1,327 @@
+@import '../scss/_variables.scss';
+#header {
+  z-index: 1030;
+  position: relative;
+  color: $font-color;
+  cursor: context-menu;
+  .header-stripe {
+    min-height: 50px; // padding-top: 18px;
+    background-color: $bg-color3;
+    font: {
+      family: $font-Montserrat;
+      weight: 600;
+      size: 14px;
+    }
+    .logging {
+      position: relative;
+      .userLogged {
+        .userName {
+          color: $color2;
+          font-weight: 600;
+          padding: 0 2px;
+        }
+        & > p {
+          display: inline;
+        }
+        .btn-login {
+          margin: 0 10px;
+          font: {
+            weight: 600;
+            size: 14px;
+          }
+        }
+      }
+    }
+    .phone {
+      height: 50px;
+    }
+  }
+  .header-middle {
+    height: 180px;
+    background-color: $bg-color;
+    padding-top: 70px;
+    font: {
+      family: $font-Montserrat;
+    }
+    .search-bar {
+      text-align: center;
+    }
+    .example-form {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+    }
+    .example-full-width {
+      width: 100%;
+    }
+    .input-group,
+    .form {
+      .clear-button {
+        margin-left: -20px;
+        margin-top: 10px;
+        font-size: 20px;
+        z-index: 1070;
+        cursor: pointer;
+      }
+      .searchInput {
+        background-color: transparent;
+        color: $font-color;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $font-color;
+        &:focus {
+          border-bottom: 1px solid $color2;
+          box-shadow: none;
+        }
+      }
+      .listFiltered {
+        list-style: none;
+        .itemsInList {
+          min-height: 50px;
+          width: 100%;
+          background-color: $bg-color;
+          border-bottom: 1px solid $color2;
+          font: {
+            family: $font-muli;
+            weight: 600;
+          }
+          z-index: 1080;
+          a {
+            padding: 10px;
+            top: 15px;
+            color: $font-color;
+            text-decoration: none;
+            &:hover {
+              color: $color2;
+            }
+          }
+        }
+      }
+    }
+    .shoppingCart {
+      margin-top: 5px;
+      font-family: $font-muli;
+      text-decoration: none;
+      color: $font-color;
+      font: {
+        family: $font-muli;
+        weight: 700;
+      }
+      .amountOfItems {
+        background-color: $color2;
+        color: $color4;
+      }
+      .shopIcon {
+        font-size: 38px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $color;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 330px;
+  width: 100%;
+  overflow: hidden;
+  color: $color-white;
+  .footerTop {
+    margin-top: 50px;
+    .textHeader {
+      font: {
+        family: $font-Montserrat;
+        weight: 600;
+        size: 14px;
+      }
+      text-transform: uppercase;
+    }
+    .tekst {
+      margin-top: 10px;
+      line-height: 18px;
+      font: {
+        size: 14px;
+        weight: 400;
+      }
+      color: $font-color;
+      .footerMenu {
+        text-decoration: none;
+        color: $font-color; // padding-bottom: 3px;
+        &:hover {
+          color: $color5;
+        }
+      }
+      .iconMy {
+        vertical-align: middle;
+        margin-top: -1px;
+      }
+      .info {
+        font-weight: 700;
+        padding-top: 3px;
+      }
+    }
+  }
+  .copyright {
+    position: absolute;
+    background-color: $color4;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    color: $font-color;
+    font: {
+      family: $font-Montserrat;
+      weight: 600;
+      size: 12px;
+    }
+    .copyrightIcon {
+      font-size: 12px;
+      padding: 0 2px;
+    }
+  }
+}
+
+go-top-button:hover {
+  background: firebrick;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #header {
+    .header-middle {
+      position: relative;
+      height: 180px;
+      padding-top: 40px;
+      .shoppingCart {
+        margin-top: -5px;
+      }
+    }
+    .form {
+      padding: 20px 0;
+      .listFiltered {
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        .itemsInList {
+          position: relative;
+          min-height: 25px;
+          font: {
+            family: $font-muli;
+            weight: 600;
+            size: 14px;
+          } // border: 2px solid red;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #header {
+    .header-stripe {
+      .logging {
+        margin-bottom: 10px;
+      }
+    }
+    .header-middle {
+      position: relative;
+      height: 180px;
+      padding-top: 40px;
+      .shoppingCart {
+        margin-top: -5px;
+      }
+    }
+    .form {
+      padding: 20px 0;
+      .listFiltered {
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        .itemsInList {
+          position: relative;
+          min-height: 25px;
+          font: {
+            family: $font-muli;
+            weight: 600;
+            size: 14px;
+          } // border: 2px solid red;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #header {
+    .header-stripe {
+      padding: 0;
+      margin: 0;
+      font: {
+        size: 12px;
+      }
+      .logging {
+        margin-bottom: 10px;
+        .userLogged {
+          .userName {
+            color: $color2;
+            font-weight: 600;
+            padding: 0px;
+          }
+
+          .btn-login {
+            margin: 0 1px;
+            font: {
+              weight: 600;
+              size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .header-middle {
+      position: relative;
+      height: 180px;
+      padding-top: 20px;
+      .shoppingCart {
+        margin-top: 20px;
+      }
+    }
+    .form {
+      padding: 20px 0;
+      .listFiltered {
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        .itemsInList {
+          position: relative;
+          min-height: 25px;
+          font: {
+            family: $font-muli;
+            weight: 600;
+            size: 14px;
+          } // border: 2px solid red;
+        }
+      }
+    }
+  }
+  footer {
+    height: 360px;
+
+    .footerTop {
+      margin-top: 20px;
+    }
+    .copyright {
+      font: {
+        weight: 500;
+        size: 10px;
+      }
+      .copyrightIcon {
+        font-size: 11px;
+        padding: 0 2px;
+      }
+    }
+  }
+}

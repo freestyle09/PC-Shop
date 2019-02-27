@@ -1,0 +1,206 @@
+<section>
+  <div class="test">
+    <div class="background">
+
+    </div>
+
+    <div class="tekst">
+      <p>Nowy rok, nowe możliwości</p>
+      <p>Sprawdź najlepsze okazje w Shop PC!</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="container">
+  <div id="new_prod_div">
+    <div class="row">
+      <div class="newProducts">
+        <div class="new_products">
+          Nowe produkty
+        </div>
+        <div class="new_products_desc">
+          Najnowsze części PC, laptopy, gry a to wszystko w najlepszej cenie na rynku!
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <div class="row d-flex justify-content-md-center">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-2" *ngFor="let item of newArray ">
+
+
+          <div class="card">
+            <div>
+
+              <img [src]="item.imageUrl" class="image-product" />
+
+            </div>
+            <div>
+              <div class="opis">
+                <p class="category">
+                  <a [routerLink]="['products/', item.category]">{{item.display}}</a>
+                </p>
+                <p class="product-name">{{item.name}}</p>
+
+                <ng-container *ngIf="item.promotion">
+                  <div class="prices">
+                    <p class="promotion">{{item.promotion | floatNumbers}} zł</p>
+                    <p class="price">{{item.price | floatNumbers}} zł </p>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="!item.promotion">
+                  <div class="prices">
+
+                    <p class="price">{{item.price | floatNumbers}} zł</p>
+                  </div>
+                </ng-container>
+
+                <div class="btn_add_cart">
+                  <a mat-raised-button color="primary" [routerLink]="['product-details/', item.category, item.$key]">Zobacz szczegóły
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="advantages">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mb-2">
+        <div class="row">
+
+          <div class="col-lg-3 col-xl-2 d-lg-flex justify-content-center">
+            <i class="material-icons iconMy">timelapse</i>
+          </div>
+          <div class="col-lg-9 col-xl-10">
+            <div class="description">
+              <p class="fastRealization">Szybka Realizacja</p>
+              Staramy się, aby zapewnić maksymalny komfort zakupów online. Jeśli złożysz zamówienie w dniu roboczym do godziny 13:00, postaramy
+              się jak najszybciej przygotować je do wysyłki i może ono do Ciebie dotrzeć nawet już następnego dnia. Standardowy
+              czas realizacji zamówienia wynosi 1-2 dni roboczych.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-2">
+        <div class="row">
+
+          <div class="col-lg-3 col-xl-2">
+            <i class="material-icons iconMy">drive_eta</i>
+          </div>
+          <div class="col-lg-9 col-xl-10">
+            <div class="description">
+              <p class="fastRealization">Darmowa dostawa</p>
+              Jeśli jako zalogowany Klient sklepu zrealizowałeś zamówienia o łącznej wartości minimum 200 zł, to po wyborze płatności online,
+              każde Twoje zakupy w sklepie internetowym PC Shop za minimum 50 zł wyślemy GRATIS!!!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-2">
+        <div class="row">
+
+          <div class="col-lg-3 col-xl-2">
+            <i class="material-icons iconMy">assignment_return</i>
+          </div>
+          <div class="col-lg-9 col-xl-10">
+            <div class="description">
+              <p class="fastRealization">Zwrot lub wymiana</p>
+              Prawo odstąpienia od umowy bez podania przyczyny przysługuje każdemu konsumentowi, który zawarł umowę sprzedaży na odległość.
+              Umowa sprzedaży na odległość to nie tylko ta, którą zawieramy robiąc zakupy przez internet, ale również wyrażenie
+              woli jej zawarcia przez telefon. W obu przypadkach konsumentowi przysługuje określony czas na odstąpienie od
+              umowy.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-2">
+        <div class="row">
+
+          <div class="col-lg-3 col-xl-2">
+            <i class="material-icons iconMy">loyalty</i>
+          </div>
+          <div class="col-lg-9 col-xl-10">
+            <div class="description">
+              <p class="fastRealization">Gwarancja</p>
+              Jeśli konsument kupił od sprzedawcy towar, który okazał się niezgodny z umową (np. miał wady), ma ustawowe prawo do jego
+              reklamacji w ciągu dwóch lat od dnia jego nabycia. Sprzedawca za towar odpowiada zawsze - z mocy prawa, natomiast
+              czasem może się zdarzyć, że na dany towar jest wystawiona tzw. gwarancja producenta.
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="recProducts">
+      <div class="row">
+        <div class="newProducts">
+          <div class="new_products">
+            Polecane produkty
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <ng-container *ngFor="let item of recProducts">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="row oneProduct">
+
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12 d-flex align-items-center justify-content-center">
+                <img [src]="item.imageUrl" class="recImage">
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12 d-flex-inline align-self-center productDescription">
+
+                <div class="productName2">
+                  {{item.display}}
+                </div>
+                <div class="productName">
+                  {{item.name}}
+                </div>
+
+                <div>
+                  <ng-container *ngIf="item.promotion">
+                    <span class="promotion">{{item.promotion | floatNumbers}} zł</span>
+                    <span class="price">{{item.price |floatNumbers}} zł</span>
+                  </ng-container>
+                  <ng-container *ngIf="!item.promotion">
+
+                    <span class="price">{{item.price | floatNumbers}} zł</span>
+                  </ng-container>
+
+                </div>
+                <div>
+                  <a mat-raised-button color="primary" [routerLink]="['product-details/', item.category, item.$key]">Zobacz szczegóły
+                  </a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+</section>

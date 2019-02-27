@@ -1,0 +1,81 @@
+@import '../../scss/_variables.scss';
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #d3d3d3;
+}
+
+.full {
+  color: $color2;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: $color2;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+    margin-top: 10px;
+  width: 100%;
+}
+
+.productReviews {
+    width: 90%;
+
+  .ratings {
+    text-align: center;
+    margin-bottom: 30px;
+    .actualRate {
+      padding-bottom: 20px;
+      font: {
+        size: 16px;
+        weight: 700;
+      }
+      text-transform: uppercase;
+    }
+    .stars {
+      color: $color2;
+      font: {
+        family: $font-chewy;
+        size: 26px;
+      }
+    }
+  }
+  .userReviews {
+    .stars {
+      color: $color2;
+      font-size: 22px;
+    }
+    .rate {
+      font: {
+        family: $font-chewy;
+      }
+      color: $color2;
+    }
+    .description {
+        padding: 5px 0 10px 0;
+        font-family: $font-OpenSans;
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+    .userAdded {
+        font: {
+            size: 12px;
+            family: $font-muli;
+        }
+        .user {
+            font-weight: bold;
+        }
+    }
+  }
+}
